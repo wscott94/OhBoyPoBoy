@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="styles3.css">
+      <script src="myScript.js"></script>
+      <title>Oh Boy Po Boy</title>
+</head>
+
+ <main>
+
+       <header>
+            <!-- Your mockup includes a header that features both the name of the company
+            and the logo. This appears before the navigation. We have to make space for that information within the header.-->
+            <div id="branding">
+                <h1>Oh Boy <br>Po Boy's</h1>
+                <img src="images/victor-martin-KCYPgrFHL6I-unsplash.jpg" alt="Oh Boy Po Boy logo">
+                <!-- <div>
+                    <img src="images/victor-martin-KCYPgrFHL6I-unsplash.jpg" alt="Oh Boy Po Boy logo">
+                </div> -->
+            </div>
+            <nav>
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox" id="icon">&#9776;</label> 
+                <ul>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Tracker</a></li>
+                    <li><a href="#">Our/Story</a></li>
+                    <li><a href="#">Your/Order</a></li>
+                </ul>   
+            </nav>
+       </header>
+
+       <!-- Section: Hot Selection -->
+
+        <section>
+            <h2> Hot Selection </h2>
+            <div class="food-container" >
+                <img src="images/blackened-shrimp-po-boy.jpg" alt="Blackened shrimp Po Boy">
+                    
+                <img src="images/fried-po-boy.jpg" alt="Fried Shrimp Po Boy">
+                
+                <img src="images/shrimp-salad.jpg" alt="Shrimp Salad">
+                    
+                <img src="images/po-boy-and-fries.jpg" alt="Shrimp Po Boy and Fries">
+                    
+                <img src="images/shrimp-basket.jpg" alt="Shrimp Basket">
+            </div>     
+        </section>
+
+        <!---You Order Bar-->
+        <section>
+          <div class="container">
+            <h2>Your Order</h2>
+            <div class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-total">
+                <p>Total: <span id="total-price">$0.00</span></p>
+            </div>
+            <button class="checkout-btn" onclick="alert('Checkout functionality not implemented');">Checkout</button>
+        </div>
+        <script src="script.js"></script>
+        </section>
+             
+       
+
+        <!-- Section: Tracker -->
+         <section>
+            <h2>Tracker</h2>
+         </section>
+         <div id="googleMap" style="width:100%;height:400px;"></div>
+         <script>
+          function myMap() {
+          var mapProp= {
+            center:new google.maps.LatLng(51.508742,-0.120850),
+            zoom:5,
+          };
+          var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+          }
+          </script>
+          
+          <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+          
+
+         <!-- Section: Plan Ahead -->
+         <section>
+            <h2>Plan Ahead</h2>
+         </section>
+         <div class="month">
+            <ul>
+              <li class="prev">&#10094;</li>
+              <li class="next">&#10095;</li>
+              <li>May<br><span style="font-size:18px">2025</span></li>
+            </ul>
+          </div>
+          
+          <ul class="weekdays">
+            <li>Mo</li>
+            <li>Tu</li>
+            <li>We</li>
+            <li>Th</li>
+            <li>Fr</li>
+            <li>Sa</li>
+            <li>Su</li>
+          </ul>
+          
+          <ul class="days">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
+            <li>22</li>
+            <li>23</li>
+            <li>24</li>
+            <li>25</li>
+            <li>26</li>
+            <li>27</li>
+            <li>28</li>
+            <li>29</li>
+            <li>30</li>
+            <li>31</li>
+          </ul>
+
+         <!-- Section: Oh Boy's Story -->
+         
+            
+         
+         <section id="Po-boy-Story">
+          <h2>Oh Boy's Story</h2>
+         <div class="Story-content">
+            <!-- <img src="images/victor-martin-KCYPgrFHL6I-unsplash.jpg" alt="company photo"> -->
+            <div class="story-text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repudiandae error sunt voluptate beatae, veritatis obcaecati voluptatum, necessitatibus excepturi expedita 
+              exercitationem doloremque? Voluptates magnam commodi necessitatibus sapiente voluptatibus delectus tempora pariatur labore? Commodi, earum aut. Dolorum expedita tempora iure 
+              dolorem quae illum ea libero fuga optio ratione similique repellat eaque sequi accusantium a modi nemo voluptatem autem perferendis, aliquid esse, earum iusto pariatur incidunt! 
+              Magni voluptas sunt architecto blanditiis nulla. Quia, officiis ab, eligendi expedita ea dolorem distinctio fuga, facere dolorum cumque explicabo molestiae obcaecati libero quae non 
+              fugit vitae aperiam mollitia veniam. Amet iste nesciunt, ipsum in reiciendis libero.</p>
+         </div>
+         </div>
+        </section>
+
+          <!-- Section: Team Comments -->
+          <section class="customer-reviews">
+            <h2>Customer Reviews</h2>
+            <br>
+            <div class="review-container">
+              <div class="review">
+                <img src="customer.jpg" alt="Customer">
+                <p>This sandwich smells great and taste even better!!! </p>
+                <p class="author">- Peter P.</p>
+              </div>
+              <div class="review">
+                <img src="customer2.jpg" alt="Customer 2">
+                <p>Great service, friendly staff, amazing food. what else do you need</p>
+                <p class="author">- Steve R.</p>
+              </div>
+              <div class="review">
+                <img src="customer2.jpg" alt="Customer 2">
+                <p>Wonderful spot easy to track and always worth the trip.</p>
+                <p class="author">- Tony S.</p>
+              </div>
+            </div>
+          </section>
+        
+       
+
+<!--for the 'Your Order' bar-->
+        
+<!--bottom section of the page after 'Your order' bar-->
+
+   
+<!-- <div class="box-2">
+<h2>Truck Tracker</h2>
+
+</div>
+
+<div class="box-3">
+<h2>Plan ahead</h2>
+</div>
+
+<div class="box-4">
+    <h2>Oh Boy's Story / Team Comments</h2>
+    </div>
+        
+
+<div class="box-5">
+    <h2>Customer Reviews</h2>
+    </div>-->
+
+    
+</main>
+
+<br> 
+   
+<!--contact us/ social media links-->
+<footer>
+  <button class="open-button" onclick="openForm()">Contact Us!</button>
+  <div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <h1>Contact</h1>
+  
+      <label for="Name"><b>Name</b></label>
+      <input type="text" placeholder="Name" name="email" required>
+  
+      <label for="Email"><b>Email</b></label>
+      <input type="password" placeholder="Email to send coupons too" name="psw" required>
+
+      <label for="Number"><b>Phone Number</b></label>
+      <input type="password" placeholder="A vaild number we may contact" name="psw" required>
+
+      <label for="Comments"><b>Comments</b></label>
+      <input type="password" placeholder="Comments/Concerns/Suggestions" name="psw" required>
+  
+      <button type="submit" class="btn">Submit</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+    <a href="https://x.com/" title="twitter.com">Twitter</a>
+
+
+</footer>
+
+</html>

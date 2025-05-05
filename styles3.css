@@ -1,0 +1,403 @@
+
+/* ------- Reset Stylesheet ---------- */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* ------- End of Reset Stylesheet ---------- */
+
+/*------- Header-------*/
+
+/* Add additional space at the bottom of the header so that other content can be seen in desktop view.
+header {
+    margin-bottom: 10%;
+}
+
+/* ------- Branding ---------- */
+
+/* Set the width of the branding area to 90% to allow for white space on the left and right sides.
+Margin set to auto to center it horizontally.
+The div is set to a flex container so that we can use the flex superpowers to position the content.
+Background is set to white per the mockup. */
+#branding {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    padding: 2% 0;
+}
+
+
+/* Heading 1 can be used one once per web page and is perfect for your brand's name. Font color and font was updated per the mockup
+as well as the size. Flex basis was used to ensure that this item within the flex container took up at least half of the flex container. */
+h1 {
+    color: black;
+    font-family: "Hachi Maru Pop", serif;
+    font-size: 5vw;
+    flex-basis: 50%;
+}
+
+/* The next child within the flex container will take up at least half of the container. This is not totally needed, but I added it anyway. */
+#branding div {
+    flex-basis: 50%;
+}
+
+/* The image was set to be smaller that the original size and curved borders were added to mimic the circular shape you included in the mockup. */
+#branding img {
+    width: 25%;
+    border-radius: 50%;
+}
+
+/* ------- End of Branding ---------- */
+
+/* ------- Navigation ---------- */
+
+
+#checkbox {
+    display: none;
+}
+
+#icon {
+    font-size: 2rem;
+}
+
+nav ul{
+    /* background-color: #9e0e29; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1% 0;
+    display: none;
+    z-index: 999;
+    /* Next two styles nudge the menu up*/
+    position: relative;
+    top: -15px;
+}
+
+
+nav ul li {
+    padding: 3% 0;
+    list-style-type: none;
+}
+
+nav ul li a{
+    font-size: 2rem;
+    color: #fff8fd;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/*Display nav when checkbox is checked*/
+
+#checkbox:checked ~ ul {
+    background-color: #9e0e29;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 0;
+}
+
+li a {
+    display: block;
+    color: black;
+    font-family: "Hachi Maru Pop", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin: 5%;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px;
+    
+}
+
+li a:hover:not(.active) {
+    background-color: #9e0e29;
+}
+
+.active {
+    background-color: #fff8fd;
+}
+
+/*------- End of Navigation-------*/
+
+/*------- Hot Selection -------*/
+
+section {
+    margin-top: 10%;
+}
+
+h2 {
+    font-family: "Hachi Maru Pop", serif;
+    font-size: 3vw;
+    text-align: center;
+    background-color: #fff8fd;
+    border: 10px solid #9e0e29;
+    color: black;
+    z-index: -1;
+}
+
+.food-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.food-container img {
+    width: 80%;
+    width: 350px;
+    height: 250px;
+    border: 2px solid #9f0f80;
+    border-radius: 20px;
+    margin: 10px;
+    transition: 400ms;
+    z-index: -1;
+}
+
+/*------- End of Hot Selection -------*/
+
+/* Media Queries*/
+
+@media screen and (min-width: 1024px) {
+   
+    #icon {
+        display: none;
+    }
+
+    nav {
+        height: 20px;
+        
+    }
+
+    nav ul {
+        background-color: #9e0e29;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .box-1{
+        display: flex;
+        padding: 0%;
+        margin: auto;
+    }
+}
+
+/* ------- End of Navigation ---------- */
+
+/*----Your Order----*/
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.cart-items {
+    margin-top: 20px;
+}
+.checkout-btn {
+    background-color: #9f0f80;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/*--------Start of Plan Ahead---------*/
+
+ul {list-style-type: none;}
+body {font-family: "Hachi Maru Pop", serif;}
+
+/* Month header */
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #9e0e29;
+  text-align: center;
+}
+
+/* Month list */
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color:#ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #9f0f80;
+  text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:20px;
+  color: #9f0f80;
+}
+
+.days li:hover{
+    background-color: #9e0e29;
+    font-size:20px ;
+    color: #fff8fd;
+}
+
+.story-text p{
+    font-size: 25px;
+}
+
+/*--------- End of Plan Ahead----------*/
+
+/*------W3Schools was a big help wiht the calender --------*/
+
+/*------Customer Reviews-------*/
+
+
+  .review-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows reviews to wrap to the next line */
+    justify-content: space-between; 
+    max-width: 800px; /* Limit width for better readability */
+    /* background-color: #9e0e29; */
+    color: #fff8fd;
+  }
+  
+  .review {
+    background-color: #9e0e29;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: calc(50% - 20px); /* Two reviews per row */
+  }
+  
+  .review img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Make it a circle */
+    margin-right: 10px;
+  }
+
+  /*----End Reviews----*/
+
+  /*--Footer---*/
+
+footer {
+    background-color: #9e0e29;
+    font-size: 25px;
+}
+    /*----Contact us box----*/
+
+/* {box-sizing: border-box;} */
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+opacity: 1;}
+
